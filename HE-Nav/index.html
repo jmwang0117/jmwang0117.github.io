@@ -168,12 +168,13 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Aerial-ground robots (AGRs) have unique dual-mode capabilities (i.e., flying and driving), making them ideal for search and rescue tasks. Existing AGRs navigation systems have advanced in structured indoor scenarios using Euclidean Signed Distance Field (ESDF) maps for collision-free pathfinding. However, these systems exhibit suboptimal performance and efficiency in occluded environments (e.g., forests) due to perception module and path planner limitations.</p>
-          
-          <p>In this paper, we present HE-Nav, the first high-performance and efficient navigation system tailored for AGRs. The perception module utilizes a lightweight semantic scene completion network (LBSCNet), guided by a bird's eye view (BEV) feature fusion and enhanced by an exquisitely designed SCB-Fusion module and attention mechanism. This enables real-time and efficient obstacle prediction in occluded areas, generating a complete local map. Building upon this completed map, our novel AG-Planner employs the energy-efficient Kinodynamic A* search algorithm to guarantee planning is energy-saving. Subsequent trajectory optimization and post-refinement processes yield safe, smooth, dynamically feasible and ESDF-free aerial-ground hybrid paths.</p>
-          
-          <p>Extensive simulations and real-world experiments demonstrate HE-Nav achieved 7x energy savings in real-world situations while maintaining planning success rates of 98% in simulation scenarios. The code and hardware configuration will be made available.</p>
-      </div>
+          <p> Aerial-ground robots (AGRs) have unique dual-mode capabilities (i.e., flying and driving), making them ideal for search and rescue tasks. Existing AGR navigation systems have advanced in structured indoor scenarios using sensors to sense the environment and build the Euclidean Signed Distance Field (ESDF) map for collision-free pathfinding. However, these systems are exhibit suboptimal performance and efficient in occluded environments (e.g., forests) due to perception module and path planner limitations. </p>
+
+          <p> In this paper, we present HE-Nav, the first high-performance and efficient navigation system tailored for AGRs. The perception module utilizes a lightweight semantic scene completion network (LBSCNet), guided by a bird's eye view (BEV) feature fusion and enhanced by an exquisitely designed SCB-Fusion module and attention mechanism. This enables real-time and efficient obstacle prediction in occluded areas, generating a complete local map. Building upon this completed map, our novel AG-Planner employs the energy-efficient kinodynamic A* search algorithm to guarantee planning is energy-saving. Subsequent trajectory optimization processes yield safe, smooth, dynamically feasible and ESDF-free aerial-ground hybrid paths. </p>
+
+          <p> Extensive experiments demonstrate that HE-Nav achieved 7x energy savings in real-world situations while maintaining planning success rates of 98% in simulation scenarios. Code and video are available on our project page: https://jmwang0117.github.io/HE-Nav/. </p>
+      
+        </div>
       </div>
     </div>
   </div>
