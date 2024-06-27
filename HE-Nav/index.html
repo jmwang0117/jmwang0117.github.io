@@ -18,7 +18,27 @@
   <!-- Keywords for your paper to be indexed by-->
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <style>
+    /* 用于控制图片大小和居中显示 */
+    .carousel-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 60%; /* 容器宽度的100%，根据需要调整 */
+      height: auto; /* 维持图像的宽高比 */
+    }
+    
+    /* 用于垂直居中 .item 内的内容 */
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%; /* 根据需要调整高度 */
+    }
+    
+      </style>
 
   <title>HE-Nav</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -249,58 +269,56 @@
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
+        <div class="item">
+          <!-- Your image here -->
+          <img class="carousel-image" src="static/images/overview.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            HE-Nav.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="carousel-image" src="static/images/network.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+            LBSCNet.
+          </h2>
+        </div>
+        <div class="item">
+          <!-- Your image here -->
+          <img class="carousel-image" src="static/images/planner.png" alt="MY ALT TEXT"/>
+          <h2 class="subtitle has-text-centered">
+           AG-Planner
+         </h2>
+       </div>
        <div class="item">
         <!-- Your image here -->
-        <img src="static/images/overview.png" alt="MY ALT TEXT"/>
+        <img class="carousel-image" src="static/images/sim_result.png" alt="MY ALT TEXT"/>
         <h2 class="subtitle has-text-centered">
-          HE-Nav.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/network.png" alt="MY ALT TEXT"/>
-        <h2 class="LBSCNet">
-          LBSCNet.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/planner.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         AG-Planner
+          Simulation experiment results
        </h2>
      </div>
      <div class="item">
       <!-- Your image here -->
-      <img src="static/images/sim_result.png" alt="MY ALT TEXT"/>
+      <img class="carousel-image" src="static/images/robot.png" alt="MY ALT TEXT" />
       <h2 class="subtitle has-text-centered">
-        Simulation experiment results
+        AGR
      </h2>
    </div>
    <div class="item">
     <!-- Your image here -->
-    <img src="static/images/robot.png" alt="MY ALT TEXT" style="display: block; margin-left: auto; margin-right: auto; width:75%" />
+    <img class="carousel-image" src="static/images/ssc1.png" alt="MY ALT TEXT"/>
     <h2 class="subtitle has-text-centered">
-      AGR
+      LBSCNet prediction results
    </h2>
- </div>
-
- <div class="item">
-  <!-- Your image here -->
-  <img src="static/images/ssc1.png" alt="MY ALT TEXT"/>
-  <h2 class="subtitle has-text-centered">
-    LBSCNet prediction results
- </h2>
+  </div>
+  <div class="item">
+    <!-- Your image here -->
+    <img class="carousel-image" src="static/images/experiment1.png" alt="MY ALT TEXT"/>
+    <h2 class="subtitle has-text-centered">
+      Real World Experiment
+   </h2>
+  </div>
 </div>
-
-<div class="item">
-  <!-- Your image here -->
-  <img src="static/images/experiment1.png" alt="MY ALT TEXT"/>
-  <h2 class="subtitle has-text-centered">
-    Real World Experiment
- </h2>
-</div>
-
 
      <!-- <div class="item">
       
