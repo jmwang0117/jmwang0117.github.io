@@ -19,14 +19,24 @@
   <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    .carousel-image {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 50%; /* Adjust the max-width as needed */
-      height: auto; /* This will maintain the aspect ratio of the images */
-    }
+/* 用于控制图片大小和居中显示 */
+.carousel-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%; /* 容器宽度的100%，根据需要调整 */
+  height: auto; /* 维持图像的宽高比 */
+}
 
+/* 用于垂直居中 .item 内的内容 */
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%; /* 根据需要调整高度 */
+}
 
   </style>
 
