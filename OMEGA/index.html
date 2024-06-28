@@ -72,10 +72,10 @@
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                <a href="#" target="_blank">Junming Wang<sup>1,†</sup></a>,</span>
+                <a href="#" target="_blank">Junming Wang<sup>1</sup></a>,</span>
 
                 <span class="author-block">
-                  <a href="https://huangd1999.github.io/" target="_blank">Dong Huang<sup>1,†</sup></a>,</span>
+                  <a href="https://huangd1999.github.io/" target="_blank">Dong Huang<sup>1,*</sup></a>,</span>
               
                 
                    <span class="author-block">
@@ -93,7 +93,7 @@
            
                 
                    <span class="author-block">
-                <a href="https://www.cs.hku.hk/index.php/people/academic-staff/heming" target="_blank">Heming Cui<sup>1,2,*</sup></a>,</span>
+                <a href="https://www.cs.hku.hk/index.php/people/academic-staff/heming" target="_blank">Heming Cui<sup>1,2</sup></a>,</span>
                 <span class="author-block">
              
                   </div>
@@ -101,7 +101,7 @@
                   <div class="is-size-5 publication-authors">
                     <span class="author-block"><sup>1</sup>The University of Hong Kong (HKU)<br><sup>2</sup>Shanghai AI Laboratory<br><sup>3</sup>Huazhong University of Science and Technology<br>Submitted to IEEE RAL 2024 (Under Review)</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>denotes corresponding author.</small></span>
-                    <span class="eql-cntrb"><small><br><sup>†</sup>denotes contributed equally to this work.</small></span>
+                   
                   </div>
 
                   <div class="column has-text-centered">
@@ -185,11 +185,18 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>Air-ground robots (AGRs) are widely used in surveillance and disaster response due to their exceptional mobility and versatility (i.e., flying and driving). Current AGR navigation systems perform well in static occlusion-prone environments (e.g., indoors) by using 3D semantic occupancy networks to predict occlusions for complete local mapping and then computing Euclidean Signed Distance Field (ESDF) for path planning. However, these systems face challenges in dynamic, crowded occlusion scenes due to limitations in perception networks' low prediction accuracy and path planners' computation overhead.</p>
 
-          <p>To address these limitations, we propose OMEGA consists of OccMamba with Efficient AGR-Planner. OccMamba adopts a novel architecture that separates semantic and occupancy prediction into independent branches, incorporating two mamba blocks within these branches. These blocks efficiently extract semantic and geometric features in 3D environments with linear complexity, ensuring that the network can capture long-distance dependencies to improve prediction accuracy. Semantic and geometric features are combined within the Bird's Eye View (BEV) space to minimise computational overhead during feature fusion. The resulting semantic occupancy map is then seamlessly integrated into the local map, providing occlusion awareness of the dynamic environment. Our AGR-Planner utilizes this local map and employs kinodynamic A* search and gradient-based trajectory optimation to generate efficient, collision-free, and energy-efficient aerial-ground hybrid paths. </p>
-          
-          <p>Extensive experiments demonstrate that OccMamba outperforms the state-of-the-art 3D semantic occupancy network with 25.0% mIoU. End-to-end navigation experiments in dynamic scenes verify OMEGA's efficiency, achieving a 96% average planning success rate.  </p>
+          <p>
+            Air-ground robots (AGRs) are widely used in surveillance and disaster response due to their exceptional mobility and versatility (i.e., flying and driving). Current AGR navigation systems perform well in static occlusion-prone environments (e.g., indoors) by using 3D semantic occupancy networks to predict occlusions for complete local mapping and then computing Euclidean Signed Distance Field (ESDF) for path planning. However, these systems face challenges in dynamic, occlusion scenes due to limitations in perception networks' low prediction accuracy and path planners' high computation overhead.</p>
+            
+            <p>
+            In this paper, we propose OMEGA, which contains OccMamba with an Efficient AGR-Planner to address the above-mentioned problems. OccMamba adopts a novel architecture that separates semantic and occupancy prediction into independent branches, incorporating two mamba blocks within these branches. These blocks efficiently extract semantic and geometric features in 3D environments with linear complexity, ensuring that the network can learn long-distance dependencies to improve prediction accuracy. Semantic and geometric features are combined within the Bird's Eye View (BEV) space to minimise computational overhead during feature fusion. The resulting semantic occupancy map is then seamlessly integrated into the local map, providing occlusion awareness of the dynamic environment. Our AGR-Planner utilizes this local map and employs kinodynamic A* search and gradient-based trajectory optimization to guarantee planning is ESDF-free and energy-efficient.
+            </p>
+            
+            <p>
+             Extensive experiments demonstrate that OccMamba outperforms the state-of-the-art 3D semantic occupancy network with 25.0% mIoU. End-to-end navigation experiments in dynamic scenes verify OMEGA's efficiency, achieving a 96% average planning success rate. Code and video are available at https://jmwang0117.github.io/OMEGA/.
+            </p>
+        
         </div>
       </div>
     </div>
