@@ -146,7 +146,7 @@
 
                 <!-- ArXiv abstract Link -->
                 <span class="link-block">
-                  <a href="https://www.youtube.com/watch?v=8-8XW6ufnZo" target="_blank"
+                  <a href="#" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-video"></i>
@@ -176,7 +176,7 @@
       <br>
       <br>
       <h2 class="subtitle has-text-left">
-        <p><em>To the best of our knowledge, <strong>HE-Nav</strong> is the first AGR-tailored navigation system, combining <u>occlusion awareness</u> and <u>ESDF-free</u> aerial-ground hybrid path planning, ensuring <strong>high-performance</strong> and <strong>efficient</strong> autonomous navigation in occluded environments.</em></p>
+        <p><em>To the best of our knowledge, <strong>OccRWKV</strong> is the first the First Receptance Weighted Key Value (RWKV)-based 3D Semantic Occupancy Network.</em></p>
       </h2>
     </div>
   </div>
@@ -190,12 +190,12 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p> Aerial-ground robots (AGRs) have unique dual-mode capabilities (i.e., flying and driving), making them ideal for search and rescue tasks. Existing AGR navigation systems have advanced in structured indoor scenarios using sensors to sense the environment and build the Euclidean Signed Distance Field (ESDF) map for collision-free pathfinding. However, these systems are exhibit suboptimal performance and efficient in occluded environments (e.g., forests) due to perception module and path planner limitations. </p>
-
-          <p> In this paper, we present HE-Nav, the first high-performance and efficient navigation system tailored for AGRs. The perception module utilizes a lightweight semantic scene completion network (LBSCNet), guided by a bird's eye view (BEV) feature fusion and enhanced by an exquisitely designed SCB-Fusion module and attention mechanism. This enables real-time and efficient obstacle prediction in occluded areas, generating a complete local map. Building upon this completed map, our novel AG-Planner employs the energy-efficient kinodynamic A* search algorithm to guarantee planning is energy-saving. Subsequent trajectory optimization processes yield safe, smooth, dynamically feasible and ESDF-free aerial-ground hybrid paths. </p>
-
-          <p> Extensive experiments demonstrate that HE-Nav achieved 7x energy savings in real-world situations while maintaining planning success rates of 98% in simulation scenarios. Code and video are available on our project page: https://jmwang0117.github.io/HE-Nav/. </p>
-      
+          <p>3D semantic occupancy prediction networks have demonstrated remarkable capabilities in reconstructing the geometric and semantic structure of 3D scenes, providing crucial information for robot navigation and autonomous driving systems. However, due to their large overhead from dense network structure designs, existing networks face challenges balancing accuracy and latency.
+            In this paper, we introduce OccRWKV, an efficient semantic occupancy network inspired by Receptance Weighted Key Value (RWKV).</p> 
+            
+            <p>OccRWKV separates semantics, occupancy prediction, and feature fusion into distinct branches, each incorporating Sem-RWKV and Geo-RWKV blocks. These blocks are designed to capture long-range dependencies, enabling the network to learn domain-specific representation (i.e., semantics and geometry), which enhances prediction accuracy. Leveraging the sparse nature of real-world 3D occupancy, we reduce computational overhead by projecting features into the bird's-eye view (BEV) space and propose a BEV-RWKV block for efficient feature enhancement and fusion. This enables real-time inference at 22.2 FPS without compromising performance. </p> 
+            
+            <p>Experiments demonstrate that OccRWKV outperforms the state-of-the-art methods on the SemanticKITTI dataset, achieving a mIoU of 25.1 while being 20 times faster than the best baseline, Co-Occ, making it suitable for real-time deployment on robots to enhance autonomous navigation efficiency. To support the community and ensure reproducibility, we will release the code for reference. </p> 
         </div>
       </div>
     </div>
@@ -204,246 +204,6 @@
 <!-- End paper abstract -->
 
 
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-          <h2 class="title is-3">Experiments</h2>
-      </div>
-    </div>
-    
-    <div class="columns is-centered">
-      <div class="column is-full">
-          <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">HE-Nav = LBSCNet + AG-Planner</h3>
-      </div>
-    </div>
-    <div class="columns is-centered">
-        <!-- Visual Effects. -->
-        <div class="column">
-          <div class="content has-text-centered">
-            <video id="trash-cp" autoplay controls muted loop playsinline height="100%">
-                    <source src="static/videos/LBSCNet.mp4" type="video/mp4">
-                </video>
-                <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal; margin-top: 0.5rem;">Key Component: LBSCNet</h4>
-            </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <video id="trash-ddim" autoplay controls muted loop playsinline height="100%">
-              <source src="static/videos/ral-2.mp4" type="video/mp4">
-                </video>
-                <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal; margin-top: 0.5rem;">LBSCNet Real-World Results with Semantics</h4>
-            </div>
-        </div>
-    </div>
-
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal; color: red;">New !!! (SCONet from AGRNav and LBSCNet from HE-Nav)</h3>
-      </div>
-    </div>
-    
-   
-    <!-- <div class="columns is-centered">
-      
-      <div class="column">
-          <div class="content has-text-centered">
-              <video id="video1" autoplay controls muted loop playsinline height="100%">
-                  <source src="static/videos/1.forest-HE-Nav.mp4" type="video/mp4">
-              </video>
-              <h4 class="subtitle">LBSCNet maintains high completion accuracy in cluttered environments</h4>
-          </div>
-      </div>
-      
-      <div class="column">
-          <div class="content has-text-centered">
-              <video id="video2" autoplay controls muted loop playsinline height="100%">
-                  <source src="static/videos/2.forest-AGRNav.mp4" type="video/mp4">
-              </video>
-              <h4 class="subtitle">SCONet completion accuracy decreases in cluttered environments</h4>
-          </div>
-      </div>
-    </div> -->
-
-    <!-- Second row of videos -->
-    <div class="columns is-centered">
-      <!-- First video in the second row -->
-      <div class="column">
-          <div class="content has-text-centered">
-              <video id="video3" autoplay controls muted loop playsinline height="100%">
-                  <source src="static/videos/3. HE-Nav.mp4" type="video/mp4">
-              </video>
-              <h4 class="subtitle">LBSCNet maintains high completion accuracy in cluttered environments</h4>
-          </div>
-      </div>
-      <!-- Second video in the second row -->
-      <div class="column">
-          <div class="content has-text-centered">
-              <video id="video4" autoplay controls muted loop playsinline height="100%">
-                  <source src="static/videos/4. HE-Nav.mp4" type="video/mp4">
-              </video>
-              <h4 class="subtitle">SCONet completion accuracy decreases in cluttered environments</h4>
-          </div>
-      </div>
-    </div>
-
-    
-    <div class="columns is-centered">
-      <div class="column is-full">
-          <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Navigation Experiment</h3>
-      </div>
-    </div>
-    <div class="columns is-centered">
-        <!-- Visual Effects. -->
-        <div class="column">
-          <div class="content has-text-centered">
-            <video id="trash-cp" autoplay controls muted loop playsinline height="100%">
-                    <source src="static/videos/sim.mp4" type="video/mp4">
-                </video>
-                <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal; margin-top: 0.5rem;">HE-Nav Simulation Experiment</h4>
-            </div>
-        </div>
-        <div class="column">
-          <div class="content has-text-centered">
-            <video id="trash-ddim" autoplay controls muted loop playsinline height="100%">
-              <source src="static/videos/HE-Nav.mp4" type="video/mp4">
-                </video>
-                <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal; margin-top: 0.5rem;">HE-Nav Real World Experiment</h4>
-            </div>
-        </div>
-    </div>
-  </div> 
-</section>
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item">
-          <!-- Your image here -->
-          <img class="carousel-image" src="static/images/overview.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            HE-Nav.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="carousel-image" src="static/images/network.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-            LBSCNet.
-          </h2>
-        </div>
-        <div class="item">
-          <!-- Your image here -->
-          <img class="carousel-image" src="static/images/planner.png" alt="MY ALT TEXT"/>
-          <h2 class="subtitle has-text-centered">
-           AG-Planner
-         </h2>
-       </div>
-       <div class="item">
-        <!-- Your image here -->
-        <img class="carousel-image" src="static/images/sim_result.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Simulation experiment results
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img class="carousel-image" src="static/images/robot.png" alt="MY ALT TEXT" />
-      <h2 class="subtitle has-text-centered">
-        AGR
-     </h2>
-   </div>
-   <div class="item">
-    <!-- Your image here -->
-    <img class="carousel-image" src="static/images/ssc1.png" alt="MY ALT TEXT"/>
-    <h2 class="subtitle has-text-centered">
-      LBSCNet prediction results
-   </h2>
-  </div>
-  <div class="item">
-    <!-- Your image here -->
-    <img class="carousel-image" src="static/images/experiment1.png" alt="MY ALT TEXT"/>
-    <h2 class="subtitle has-text-centered">
-      Real World Experiment
-   </h2>
-  </div>
-</div>
-
-     <!-- <div class="item">
-      
-      <img src="static/images/head.png" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div> -->
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/8-8XW6ufnZo?si=qZswN-7m-6s1RAf6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
-
-
-
-
-
-
-
-
-<!-- Paper poster -->
-<!-- <section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
-
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section> -->
-<!--End paper poster -->
-
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX</h2>
-      <pre><code>
-        @article{wang2024henav,
-        title={HE-Nav: A High-Performance and Efficient Navigation System for Aerial-Ground Robots in Occluded Environments},
-        author={Wang, Junming and Sun, Zekai and Guan, Xiuxian and Shen, Tianxiang and Huang, Dong and Zhang, Zongyuan and Duan, Tianyang  and Liu, Fangming and Cui, Heming},
-        year={2024}
-      } 
-    </code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
 
 
   <footer class="footer">
