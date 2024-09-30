@@ -40,7 +40,9 @@
     
     .my-image-size {
       width: 100%; /* or any other fixed size like 300px */
-      height: auto; /* maintain aspect ratio */
+      height: 300px; /* specify your desired height */
+      object-fit: cover;
+     
   }
 
   .mb-5 {
@@ -212,46 +214,67 @@
 
 
 
-  <section class="section">
-    <div class="container is-max-desktop">
-  
-      <!-- Row Title: OccRWKV Key Components -->
-      <div class="columns is-centered">
-        <div class="column is-full">
-            <h2 class="title is-3">OccRWKV Key Components</h2>
-        </div>
+ <!-- OccRWKV Key Components with white background -->
+<section class="section hero is-white">
+  <div class="container is-max-desktop">
+
+    <!-- Row Title: OccRWKV Key Components -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">OccRWKV Key Components</h2>
       </div>
-  
-      <!-- Row 1: Overview -->
-      <div class="columns is-centered">
-          <div class="column is-full has-text-centered mb-6">
-            <img class="my-image-size" src="static/images/overview.png" alt="Overview Image">
-            <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Key Component: OccRWKV Overview</h3>
-          </div>
+    </div>
+
+    <!-- Row 1: Overview -->
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/overview.png" alt="Overview Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Key Component: OccRWKV Overview</h3>
       </div>
-  
-      <!-- Row 2: Efficiency & Block -->
-      <div class="columns is-centered">
-          <div class="column is-half has-text-centered mb-6">
-            <img class="my-image-size" src="static/images/head.png" alt="Efficiency Image">
-            <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal;">Efficiency</h4>
-          </div>
-          <div class="column is-half has-text-centered mb-6">
-            <img class="my-image-size" src="static/images/block1.png" alt="Block Image">
-            <h4 class="subtitle" style="font-size: 1.3rem; font-weight: normal;">Block</h4>
-          </div>
+    </div>
+
+    <!-- Row 2: Block -->
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/block1.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Block</h3>
       </div>
+    </div>
+  </div> 
+</section>
+
+<!-- Experiment with light gray background -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
   
-      <!-- Row 3: OccRWKV Prediction Results -->
-      <div class="columns is-centered">
-          <div class="column is-full has-text-centered mb-6">
-            <img class="my-image-size" src="static/images/exp1.png" alt="Prediction Results Image">
-            <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Key Component: OccRWKV Prediction Results</h3>
-          </div>
+    <!-- Row Title: Experiment -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Experiment</h2>
       </div>
-  
-    </div> 
-  </section>
+    </div>
+
+    <!-- Experiment rows with Efficiency and Prediction Results side by side -->
+<div class="columns is-centered mb-6">
+  <!-- Efficiency -->
+  <div class="column is-half has-text-centered">
+    <figure class="image is-4by3">
+      <img class="my-image-size" src="static/images/head.png" alt="Efficiency Image" style="height: 100%; object-fit: cover;">
+    </figure>
+    <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Efficiency</h3>
+  </div>
+  <!-- OccRWKV Prediction Results -->
+  <div class="column is-half has-text-centered">
+    <figure class="image is-4by3">
+      <img class="my-image-size" src="static/images/exp1.png" alt="Prediction Results Image" style="height: 100%; object-fit: cover;">
+    </figure>
+    <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">OccRWKV Prediction Results</h3>
+  </div>
+</div>
+
+
+  </div> 
+</section>
   
 
 
