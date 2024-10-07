@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* 用于控制图片大小和居中显示 */
+    .carousel-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 60%; /* 容器宽度的100%，根据需要调整 */
+      height: auto; /* 维持图像的宽高比 */
+    }
+    
+    /* 用于垂直居中 .item 内的内容 */
+    .item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100%; /* 根据需要调整高度 */
+    }
+    
+    .my-image-size {
+      width: 100%; /* or any other fixed size like 300px */
+     
+    
+     
+  }
+
+  .mb-5 {
+    margin-bottom: 3rem; /* or any other value you prefer */
+}
+
+      </style>
+
+  <title>HE-Drive</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"> <a style="color:#D46EE8">HE-Drive</a>:  <a style="color:#D46EE8">H</a>uman-Like <a style="color:#D46EE8">E</a>nd-to-End Driving with Vision Language Models</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://jmwang.netlify.app/" target="_blank">Junming Wang<sup>1,2,*</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://scholar.google.com.hk/citations?user=ip_zCGMAAAAJ&hl=zh-CN" target="_blank">Xingyu Zhang<sup>1,*</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="#" target="_blank">Zebin Xing<sup>1,3</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="#" target="_blank">Songen Gu<sup>1,3</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://scholar.google.com.hk/citations?user=CrK4w4UAAAAJ&hl=en" target="_blank">Xiaoyang Guo<sup>1</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="#" target="_blank">Yang Hu<sup>1</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://scholar.google.com.sg/citations?user=tIjCAKEAAAAJ&hl=zh-CN&oi=ao" target="_blank">Ziying Song<sup>1,4</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://scholar.google.com/citations?user=pCY-bikAAAAJ&hl=zh-CN" target="_blank">Qian Zhang<sup>1</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://www.xxlong.site/" target="_blank">Xiaoxiao Long<sup>2,</sup></a>,</span>
+                <span class="author-block">
+
+                <a href="https://scholar.google.com/citations?hl=en&user=ZIf_rtcAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Wei Yin<sup>1,†</sup></a>,</span>
+                <span class="author-block">
+
+                </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">
+                      <sup>1</sup>Horizon Robotics<br>
+                      <sup>2</sup>The University of Hong Kong<br>
+                      <sup>3</sup>University of the Chinese Academy of Sciences<br>
+                      <sup>4</sup>Beijing Jiaotong University<br>
+                      
+                      <strong>Under Review</strong>
+                    </span>
+                    <span class="eql-cntrb">
+                      <small><br><sup>*</sup>denotes equal contribution</small>
+                      <small><br><sup>†</sup>denotes Corresponding authors</small>
+                    </span>
+                  </div>
+                  
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <!-- <span class="link-block">
+                        <a href="#" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span> -->
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="http://www.semantic-kitti.org/" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-database"></i>
+                      </span>
+                      <span>Dataset</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code is Coming Soon</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- <span class="link-block">
+                  <a href="#" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-video"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video poster="" id="tree" autoplay controls muted loop height="100%">
+        <!-- Your video here -->
+        <source src="static/videos/head.mp4"
+        type="video/mp4">
+      </video>
+      <br>
+      <br>
+      <br>
+      <h2 class="subtitle has-text-left">
+        <p><em>To the best of our knowledge, <strong>HE-Drive</strong> is the first human-like-centric end-to-end autonomous driving system.</em></p>
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this paper, we propose HE-Drive: the first human-like-centric end-to-end autonomous driving system to generate trajectories that are both temporally consistent and comfortable. Recent studies have shown that imitation learning-based planners and learning-based trajectory scorers can effectively generate and select accuracy trajectories that closely mimic expert demonstrations. However, such trajectory planners and scorers face the dilemma of generating temporally inconsistent and uncomfortable trajectories. 
+            </p>
+            
+            <p>
+            To solve the above problems, Our HE-Drive first extracts key 3D spatial representations through sparse perception, which then serves as conditional inputs for a Conditional Denoising Diffusion Probabilistic Models (DDPMs)-based motion planner to generate temporal consistency multi-modal trajectories. A Vision-Language Models (VLMs)-guided trajectory scorer subsequently selects the most comfortable trajectory from these candidates to control the vehicle, ensuring human-like end-to-end driving. 
+            </p>
+            
+            <p>
+            Experiments show that HE-Drive not only achieves state-of-the-art performance (i.e., reduces the average collision rate by 71% than VAD) and efficiency (i.e., 1.9X faster than SparseDrive) on the challenging nuScenes and OpenScene datasets but also provides the most comfortable driving experience on real-world data.
+            </p>
+        
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+ <!-- OccRWKV Key Components with white background -->
+<section class="section hero is-white">
+  <div class="container is-max-desktop">
+
+    <!-- Row Title: OccRWKV Key Components -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">HE-Drive Key Components</h2>
+      </div>
+    </div>
+
+    <!-- Row 1: Overview -->
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/overview.png" alt="Overview Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">HE-Drive Overview</h3>
+      </div>
+    </div>
+
+    <!-- Row 2: Block -->
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/policy.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;"> Contribution 1: Diffusion-based Motion Planner</h3>
+      </div>
+    </div>
+
+    <!-- Row 3: Block -->
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/scoring.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;"> Contribution 2: VLM-guided Trajectory Scorer</h3>
+      </div>
+    </div>
+
+
+  </div> 
+</section>
+
+
+
+<!-- OccRWKV Key Components with white background -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+
+    <!-- Row Title: OccRWKV Key Components -->
+    <div class="columns is-centered">
+      <div class="column is-full">
+        <h2 class="title is-3">Experiments</h2>
+      </div>
+    </div>
+
+    <!-- Two Columns for Parallel Display -->
+    <div class="columns is-centered mb-6">
+        <!-- Column 1: Overview -->
+        <div class="column is-half has-text-centered">
+            <img class="my-image-size" src="static/images/head.png" alt="Overview Image">
+            <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">Performance and Efficiency of OccRWKV</h3>
+        </div>
+
+        <!-- Column 2: Block -->
+        <div class="column is-half has-text-centered">
+            <img class="my-image-size" src="static/images/exp1.png" alt="Block Image">
+            <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;">OccRWKV Prediction Results</h3>
+        </div>
+    </div>
+
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/ablation.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;"> Qualitative Results of Ablation Experiments</h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/result1.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;"> Performance comparison on the SemanticKITTI test set </h3>
+      </div>
+    </div>
+
+    <div class="columns is-centered mb-6">
+      <div class="column is-full has-text-centered">
+        <img class="my-image-size" src="static/images/result2.png" alt="Block Image">
+        <h3 class="subtitle" style="font-size: 1.5rem; font-weight: normal;"> Efficiency comparison on the SemanticKITTI test set </h3>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>
+
+
+<!--BibTex citation -->
+<section class="section is-white" id="BibTeX" >
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>
+      @article{wang2024occrwkv,
+        title={OccRWKV: Rethinking Efficient 3D Semantic Occupancy Prediction with Linear Complexity},
+        author={Wang, Junming and Yin, Wei and Long, Xiaoxiao and Zhang, Xinyu and Xing, Zebing and Guo, Xiaoyang and Qian, Zhang},
+        year={2024}
+              } 
+  </code></pre>
+  </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
